@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-    overflow-x: hidden;
     margin: 0;
     font-family: gdsherpa, Helvetica, Arial, sans-serif;
     text-align: left;
@@ -9,46 +14,70 @@ body {
     padding: 0 5em;
 }
 
-.heading {
-    font-size: 2.5em;
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-    font-family: gd-sage, "Times", "Times New Roman", serif;
+.container-fluid {
+    padding: 0;
 }
 
 
 /* ###### HEADER ###### */
 .header {
-    margin: 2em 0 4em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0 3em 0;
 }
 
 .header a {
     margin-right: 1.5em;
     text-decoration: none;
     font-size: 1em;
-    color: black;
 }
 
 .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    position: relative;
 }
 
 .menu a {
     color: #aaa;
 }
 
+.menu-2 a{
+    color: #111;
+    font-size: 1emem;
+}
+
 .logo {
     height: 2em;
 }
 
+.country-name{
+    bottom: -.75rem;
+    font-size: .625rem;
+    position: absolute;
+    color: #111;
+}
 
-/* ###### PAINEL ###### */
+/* ##### DOMINIOS ##### */
+.dominios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    width: 100%;
+    height: 4em;
+}
+
 .busca-dominio{
-    height: 3em;
+    height: 100%;
     display: flex;
     align-items: center;
+    margin-bottom: .5em;
 }
 
 .busca-dominio input[type="text"]{
@@ -61,31 +90,69 @@ body {
     font-size: 1.25em;
 }
 
-.busca-dominio input[type="button"]{
-    background-color: #00838C;
-    color: white;
+.btn-busca-dominio{
+    height: 100%;
     padding: 1.5em 2.5em;
     border: none;
+    background-color: #00838C;
+    color: white;
     font-weight: 600;
+    font-size: .9em;
+}
+.fa-search{
+    display: none;
+}
+
+.preco-dominios {
+    display: flex;
+    flex-direction: row;
+}
+
+.preco-dominios div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .preco-dominios p{
-    margin-right: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding-left: 1em;
+}
+
+.preco-dominios span{
+    padding-left: .5em;
+    font-size: .7em;
+    color: #262626;
+}
+
+
+
+/* ###### PAINEL ###### */
+.paineis {
+    display: flex;
+    flex-direction: row;
 }
 
 .painel-quadrado {
     background-color: #FFF1E1;
+    width: 35em;
     padding: 4em;
     padding-bottom: 8em;
     margin-right: 1em;
 }
 
 .painel-retangulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-image: url(https://br.godaddy.com/assets/cdn/Image/All/All/3/de-DE_en-IL_en-PK_es-ES_en-AU/772a71f5-b68e-4481-b8b2-dd5ac0417074/pt-BR-mrq-60-40-landscape.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     padding: 4em;
+    width: 100%;
+    height: auto;
 }
 
 .painel-retangulo a {
@@ -105,17 +172,41 @@ body {
 .img-painel {
     padding-top: 3em;
     padding-bottom: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+.texto-painel {
+    max-width: 25em;
+    margin-right: 5em;
+}
+
+.iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(https://img1.wsimg.com/cdn/Image/All/FOS-Intl/1/pt-BR/87b382f9-094d-4c32-b234-727a78d5237c/img-vid-thumb-pt-BR-MC.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 45em;
 }
 
 
 
 /* ###### CONTEUDO ###### */
 .conteudo {
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .conteudo img {
-    width: 45em;
+    width: 100%;
+    max-width: 45em;
+    height: auto;
 }
 
 .conteudo button {
@@ -126,12 +217,17 @@ body {
     border: 1px solid black;
 }
 
-.secao-conteudo{
+.secao-conteudo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 3em 10em;
+    max-width: 100%;
+    padding: 5em;
+}
+    
+.secao-conteudo-texto {
+    max-width: 40em;
 }
 
 .secao-conteudo-reverse{
@@ -139,57 +235,22 @@ body {
     flex-direction: row-reverse;
 }
 
-.secao-conteudo img {
-    margin-right: 15em;
-}
-
-.secao-conteudo-reverse img {
-    margin-right: 0;
-    margin-left: 15em;
-}
-
-
-.secao-conteudo-texto {
-    /* margin: 0 5em; */
-}
-
 .secao-destaque {
     background-color: #09757A;
     color: #fff;
 }
 
-.secao-conteudo-texto h1 {
-    font-size: 3em;
+.heading {
+    font-size: 2.5em;
+    letter-spacing: -0.01em;
+    font-family: gd-sage, "Times", "Times New Roman", serif;
 }
 
 
-/* display flex */
-.row {
-    display: flex;
-    flex-direction: row !important;
-}
 
-.column {
-    display: flex;
-    flex-direction: column !important;
-}
-
-.row-wrap {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: row wrap;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.align-items-baseline{
-    align-items: baseline;
-}
-
-.justify-content-between {
-    justify-content: space-between;
+/* SEÇÃO GUIDES */
+.secao-guides {
+    background-image: url(https://br.godaddy.com/assets/cdn/Image/All/All/2/All/88e37ceb-9b1f-47c5-8b7c-583cb35e31a1/img-guide-us-ca-landscape.jpg);
 }
 
 
@@ -217,7 +278,110 @@ body {
     grid-row-end: 3;
     grid-column-start: 5;
     grid-column-end: 7;
+    flex-direction: column;
 }
+
+@media screen and (max-width: 1400px) {
+    .header a {
+        margin-right: 1em;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .logo {
+        height: 1em;
+    }
+    
+    .container {
+        padding: 0 3em;
+    }  
+
+    .busca-dominio input[type="text"]{
+        width: 25em;
+        padding: 1em;
+    }
+
+    .btn-busca-dominio{
+        height: 100%;
+        padding: .5em 2.5em;
+        font-weight: 600;
+    }
+
+    .preco-dominios p{
+        font-size: 1.2em;
+        font-weight: 600;
+        padding-left: .5em;
+    }
+    
+    .preco-dominios span{
+        padding-left: .5em;
+        font-size: .7em;
+        color: #262626;
+    }
+
+    .painel-quadrado {
+        background-color: #FFF1E1;
+        width: 30em;
+        padding: 4em 2em;
+        padding-bottom: 4em;
+        margin-right: 1em;
+    }
+
+    .secao-conteudo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 4em;
+        max-width: 100%;
+    }
+
+    .iframe {
+        min-height: 20em;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 1em;
+    }  
+
+    .busca-dominio input[type="text"]{
+        width: 10em;
+        padding: .75em;
+    }
+
+    .btn-busca-dominio{
+        height: 100%;
+        padding: .5em 1.5em;
+        font-weight: 600;
+    }
+
+    .fa-search{
+        display: block;
+    }
+
+    .paineis {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secao-conteudo{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 4em;
+        max-width: 100%;
+    }
+
+    .iframe {
+        min-height: 20em;
+    }
+
+}
+
 
 
 /* tamanho */
@@ -228,23 +392,6 @@ body {
 .sm {
     font-size: 11px;
 }
-
-.w-100 {
-    width: 100%;
-}
-
-.w-50 {
-    width: 50%;
-}
-
-.w-75 {
-    width: 75%;
-}
-
-.w-25{
-    width: 25%;
-}
-
 
 /* espaçamento */
 

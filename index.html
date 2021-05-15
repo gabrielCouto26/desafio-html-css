@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <header>
-            <div class="header row justify-content-between align-items-center">
-                <div class="row menu">
+            <div class="header justify-content-between align-items-center">
+                <div class="menu">
                     <a href="#">    
                         <svg width="10.375rem" height="2.125rem" viewBox="0 0 166 34" class="logo-mark" xmlns="http://www.w3.org/2000/svg">
                             <defs>    
@@ -26,14 +26,9 @@
                     <a href="#dominios">Dominios</a>
                     <a href="#sites">Sites</a>
                     <a href="#wordpress">WordPress</a>
-                    <a href="#hospedagem">Hospedagem</a>
-                    <a href="#segurança-de-sites">Segurança de Sites</a>
-                    <a href="#email-e-office">Email & Office</a>
-                    <a href="#promocoes">Promoções</a>
-                    <a href="#programas-de-parceiros">Programas de parceiros</a>
-
+                    <a href="#mais">Mais</a>
                 </div>
-                <div class="row">
+                <div class="menu-2">
                     <a href="">(11) 3958-5679</a>
                     <a href="">Blog</a>
                     <a href="">Ajuda</a>
@@ -47,21 +42,36 @@
                 </div>
             </div>
         </header>
-        <div class="row justify-content-between align-items-baseline mb-2">
-            <div class="busca-dominio mb-1">
+        <div class="dominios">
+            <div class="busca-dominio">
                 <input type="text" placeholder="Encontre seu domínio perfeito">
-                <input type="button" value="Buscar domínio">
+                <button class="btn-busca-dominio">Buscar domínio<i class="fas fa-search"></i></button>
             </div>
-            <div class="preco-dominios row">
-                <p>.club R$5,17*</p>
-                <p>.com.br R$19,99</p>
-                <p>.org R$49,99*</p>
-                <p>.online R$5.17*</p>
-                <p>.com R$19,99*</p>
+            <div class="preco-dominios">
+                <div>
+                    <p>.club</p>
+                    <span>R$5,17*</span>
+                </div>
+                <div>
+                    <p>.com.br</p>
+                    <span>R$19,99</span>
+                </div>
+                <div>
+                    <p>.org</p>
+                    <span>R$49,99*</span>
+                </div>
+                <div>
+                    <p>.online</p>
+                    <span>R$5.17*</span>
+                </div>
+                <div>
+                    <p>.com</p>
+                    <span>R$19,99*</span>
+                </div>
             </div>
         </div>
-        <div class="row w-100">
-            <div class="painel-quadrado w-25">
+        <div class="paineis">
+            <div class="painel-quadrado">
                 <h5 class="mb-3">Nomes de domínio</h5>
                 <h1 class="heading">.com e .com.br</h1>
                 <div class="mb-3 md">
@@ -72,13 +82,13 @@
                 <br/>
                 <span class="sm">Requer compra de 2 anos ou mais</span>
             </div>
-            <div class="painel-retangulo w-75 row justify-content-between">
-                <div class="w-50">
+            <div class="painel-retangulo">
+                <div>
                     <img class="img-painel" src="https://br.godaddy.com/assets/cdn/Image/All/All/1/de-DE_en-IL_en-PK_es-ES_en-AU/076d6e16-1a88-4557-9d3c-c0319e6837e5/pt-BR-img-browser.png" alt="">
                     <p class="sm"><strong>Priscylla Guesser</strong></p>
                     <p class="sm"><strong>Mandala Portal</strong></p>
                 </div>
-                <div class="w-50 ml-4">
+                <div class="ml-4 texto-painel">
                     <h5 class="mb-3">Sites + Marketing</h5>
                     <h1 class="mb-1 heading">Crie um site incrível em menos de 1 hora.</h1>
                     <div class="mb-4">
@@ -89,8 +99,8 @@
                 </div>
             </div>
         </div>
-        <div class="row w-100 mt-4">
-            <div class="produtos-grid w-100">
+        <div class="mt-4">
+            <div class="produtos-grid">
 
                 <a class="produtos-grid-card" href="#">
                     <span>Domínios <br>R$19,99*/primeiro ano</span>
@@ -127,28 +137,38 @@
             </div>
         </div>
     </div>
-    <div class="w-100 conteudo mt-4">
-        <div class="secao-conteudo secao-destaque">
-            <img src="https://img1.wsimg.com/cdn/Image/All/FoSMarqueeOnly/1/en-US/53a894b9-8dba-4105-87a9-06ce19a58bdf/img-feat-OWS_blade.jpg?impolicy=cms-feature-module" alt="">
-            <div class="secao-conteudo-texto">
-                <p class="mb-4" ><strong>Apoio aos empreendedores durantes COVID-19</strong></p>
-                <h1 class="mb-1 heading">#OpenWeStand é nossa campanha para apoiar pequenos negócios.</h1>
-                <p class="mb-4">Acesse o link abaixo para ver as ofertas ou ligue para (11) 3958-5679, vamos te ajudar em tudo o que podemos.</p>
-                <button>Visualizar as ofertas</button>
+    <div class="container-fluid">
+        <div class="conteudo mt-4">
+            <div class="secao-conteudo secao-destaque">
+                <img src="https://img1.wsimg.com/cdn/Image/All/FoSMarqueeOnly/1/en-US/53a894b9-8dba-4105-87a9-06ce19a58bdf/img-feat-OWS_blade.jpg?impolicy=cms-feature-module" alt="">
+                <div class="secao-conteudo-texto">
+                    <p class="mb-4" ><strong>Apoio aos empreendedores durantes COVID-19</strong></p>
+                    <h1 class="mb-1 heading">#OpenWeStand é nossa campanha para apoiar pequenos negócios.</h1>
+                    <p class="mb-4">Acesse o link abaixo para ver as ofertas ou ligue para (11) 3958-5679, vamos te ajudar em tudo o que podemos.</p>
+                    <button>Visualizar as ofertas</button>
+                </div>
             </div>
-        </div>
-        <div class="secao-conteudo secao-conteudo-reverse">
-            <img src="https://img1.wsimg.com/cdn/Image/All/All/1/All/83db321a-8eb2-4f9c-abb3-575267121477/img-feat-com-BR-XL.jpg?impolicy=cms-feature-module" alt="">
-            <div class="secao-conteudo-texto">
-                <p class="mb-4" ><strong>Registro de Domínios .com.br</strong></p>
-                <h1 class="mb-1 heading">Compartilhe o seu amor pelo Brasil com o mundo.</h1>
-                <p class="mb-4">Com um domínio .com.br, você tem a melhor opção em mãos. Ele combina a popularidade do .com e a marca do Brasil representada pelo .br, dando a você o nome que alcança todos os clientes, sejam eles locais ou mundiais. </p>
-                <button>Encontre o meu .com.br</button>
+            <div class="secao-conteudo secao-conteudo-reverse">
+                <img src="https://img1.wsimg.com/cdn/Image/All/All/1/All/83db321a-8eb2-4f9c-abb3-575267121477/img-feat-com-BR-XL.jpg?impolicy=cms-feature-module" alt="">
+                <div class="secao-conteudo-texto">
+                    <p class="mb-4" ><strong>Registro de Domínios .com.br</strong></p>
+                    <h1 class="mb-1 heading">Compartilhe o seu amor pelo Brasil com o mundo.</h1>
+                    <p class="mb-4">Com um domínio .com.br, você tem a melhor opção em mãos. Ele combina a popularidade do .com e a marca do Brasil representada pelo .br, dando a você o nome que alcança todos os clientes, sejam eles locais ou mundiais. </p>
+                    <button>Encontre o meu .com.br</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="container">
-        <iframe src="" frameborder="0"></iframe>
+        <div class="iframe">
+            <img src="https://img1.wsimg.com/cdn/Image/All/Website/1/en-CA/feadddf9-e9aa-4951-9389-143b5eaa4d90/videocta-sm-white-01.svg" alt="">    
+        </div>
+        <div class="secao-guides">
+            <h1>Por que escolher a GoDaddy?</h1>
+        </div>
     </div>
 </body>
+<footer style="background-color: black;">
+    <h1>oi</h1>
+</footer>
 </html>
